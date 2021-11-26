@@ -1,0 +1,376 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 3px;
+}
+
+ul,li,p{
+    display: inline;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    width:100%;
+}
+
+body{
+    width:90%;
+    margin: auto;
+}
+/*--Header--*/
+header{
+    background-color: white;
+    height: 7em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.logo, nav{
+    margin: auto 0;
+}
+.navigation{
+    width: 100%;
+}
+nav .navigation li{
+    font-size: 0.8em;
+    margin: 0 1em;
+}
+nav .navigation li.first a{
+    color: white;
+    background-color: rgb(1, 1, 129);
+    padding: 3.75em 0.8em;
+}
+nav .navigation li.first a:hover{
+    transition-duration: 0.4s;
+    background-color: black;
+    text-decoration: none;
+}
+nav .navigation .last{
+    font-size: 0.8em;
+    margin: 0 0 1em 0;
+}
+nav .navigation li a{
+    color: black;
+    background-color: white;
+    padding: 3.75em 0.8em;
+}
+nav .navigation li a:hover{
+    color: white;
+    transition-duration: 0.4s;
+    background-color: rgb(1, 1, 129);
+    text-decoration: none;
+}
+.menu{
+    display: none;
+    position: relative;
+    margin-right: 2em;
+}
+.menu span{
+    color: rgb(1, 1, 129);
+}
+.drop-cont{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    color: black;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 5;
+    list-style: none;
+}
+.drop-cont .link{
+    display: block;
+}
+.drop-cont .link:hover{
+    
+}
+.sMenu:hover i{
+    font-size: 1.4em;
+    transition-duration: 0.3s;
+}
+.menu:hover .drop-cont{
+    display: block;
+}
+/*--Main--*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+.banner{
+    width: 100%;
+    position: relative;
+}
+
+.banner img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.banner .overlay{
+     width: 100%;
+     height: 99.4%;
+     background: rgba(2, 2, 82, 0.301);
+     position: absolute;
+     top: 0;
+     left: 0;
+
+ }
+ .banner .textOverlay{
+    top: 20%;
+    left: 45%;
+    position: absolute;
+ }
+ .banner .textOverlay h1{
+    color: rgb(255, 255, 255);
+
+    font-weight: 100;
+    letter-spacing: 2px;
+    font-size: 5em;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.425);
+ }
+ .textOverlay span{
+     font-weight: bold;
+     color: rgb(3, 3, 99);
+ }
+ .textOverlay .bnt1{
+     display: inline-block;
+     font-size: 1em;
+     text-decoration: none;
+     
+     color: white;
+     padding: 1.5em 3em;
+     background-color: rgb(3, 3, 99);
+     border-color: rgb(3, 3, 99);
+     margin-top: 3em;
+ }
+ .textOverlay .bnt1:hover{
+     background-color: rgb(3, 3, 48);
+     border-color: rgb(3, 3, 48);
+ }
+
+ .what{
+    width: 90%;
+    margin: auto;
+    height: 50vh;
+ }
+ .what .desc{
+     width: 100%;
+     list-style: none;
+     display: grid;
+     grid-template-columns: repeat(auto-fit, 30%);
+    justify-content: center;
+    grid-gap: 1.5em;
+     font-size: 0.8em;
+     
+ }
+ .what .desc .box{
+     padding-top: 30%;
+     margin: auto;
+     height: 20em;
+     width: 90%;
+     background-color: white;
+ }
+ .what .desc .box h2{
+    color: rgb(3, 3, 99);
+ }
+
+ @media only screen and (max-width: 1200px){
+    .navigation{
+        display: none;
+    }
+    .menu{
+        display: inline-block;
+    }
+    .textOverlay{
+        font-size: 0.8em;
+    }
+    .dot-cont{
+        top: 0%;
+    }
+
+ }
+ @media only screen and (max-width: 750px){
+    .what{
+        height: 120vh;
+    }
+    .what .desc{
+        grid-template-columns: repeat(auto-fit, 60%);
+    }
+    .textOverlay{
+        font-size: 0.5em;
+    }
+
+ }
+ @media only screen and (max-width: 600px){
+    .logo img{
+        display: none;
+    }
+    .textOverlay{
+        font-size: 0.3em;
+    }
+ }
+.slide img{
+    height: 80vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*products page*/
+.container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30%);
+    padding-top: 1em;  
+    justify-content: center;
+    grid-gap: 2em;
+  }
+  /*para card div*/
+  .sectionItems{
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .sectionItems:hover{
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.233);
+  }
+  .info{
+    padding: 1em;
+  }
+  .btns{
+    padding-bottom: 1em;
+  }
+  .img1{
+    border-radius: 0.3em 0.3em 0 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(241, 241, 241);
+  }
+  .btn-primary{
+      background-color: rgb(1, 1, 129);
+      border-color: rgb(1, 1, 129);
+  }
+  .btn-primary:hover{
+    background-color: rgb(2, 2, 95);
+    border-color: rgb(2, 2, 95);
+}
+  @media only screen and (max-width: 1000px) {
+      
+    [class*="container"] {
+        grid-template-columns: repeat(auto-fit, 45%);
+    }
+  }
+  @media only screen and (max-width: 700px) {
+      
+    [class*="container"] {
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+  }
+  @media only screen and (max-width: 500) {
+    body{
+        width: 100%;
+    }
+  }
+
+  footer{
+      margin-top: 1em;
+      margin-bottom: 0.5em;
+      border-radius: 1em;
+      font-size: 0.7em;
+      padding: 2em;
+      background-color: rgb(243, 243, 243);
+      color: rgb(78, 78, 78);
+  }
+  footer h6{
+      margin-bottom: 0;
+      margin-top: 0.8em;
+  }
+  footer p{
+      padding-left: 2em;
+      
+  }
+
+  .about{
+      padding: 1em;
+  }
+  /*login*/
+  .login{
+      background-color: rgb(241, 241, 241);
+      width: 30%;
+      height: 50vh;
+      border-radius: 20px;
+      margin: auto;
+      padding: 20px;
+      margin-top: 20vh;
+  }
+  .loginform{
+      margin-top: 40px;
+  }
+  .inputlogin{
+      border-radius: 50px;
+      background-color: rgb(224, 224, 224);
+      width: 300px;
+      margin: auto;
+      margin-top: 10px;
+      padding: 10px;
+  }
+  .logH{
+      text-align: center;
+      width: 100%;
+  }
+  .inputlogin input{
+      background: none;
+      border: none;
+      outline: none;
+      width: 90%;
+      height: 100%;
+  }
+  .submitlog{
+      width: 300px;
+      margin: auto;
+  }
+  .submitlog input{
+      width: 100%;
+      border-radius: 50px;
+      border: none;
+      margin-top: 30px;
+      padding: 10px;
+      background-color: green;
+      color: white;
+  }
+  #search{
+      margin-top: 20px;
+      width: 400px;
+      border-radius: 10px;
+      padding: 10px;
+      border: rgb(233, 233, 233) solid 1px;
+  }
+  .searchSbmt{
+      padding: 10px;
+      background-color: green;
+      border: none;
+      border-radius: 10px;
+      color: white;
+  }
+  .searchStuff{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+  .addExp{
+      margin-top: 20px;
+  }
+  .form-group {
+    display: flex;
+}
